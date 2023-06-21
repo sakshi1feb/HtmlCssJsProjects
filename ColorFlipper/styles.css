@@ -1,0 +1,83 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+/* variables */
+:root{
+    --heading-color:#49a6ed;
+}
+/* reset classes */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    background-color: #f1f5f8;
+}
+/* styling the nav bar */
+.navbar{
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.active{
+    color: black;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    text-align: left;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+}
+.active:hover{
+    color:var(--heading-color);
+    transition: all ease-in 0.2s;
+}
+h4{
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    color: var(--heading-color);
+    text-transform: capitalize;
+    text-align: start;
+    line-height: 16px;
+    letter-spacing: 4px;
+    font-weight: bolder;
+}
+
+/* styling the color div */
+.container {
+    margin-top:15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h2{
+    font-family: 'Roboto',sans-serif;
+    text-transform: capitalize;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 4px;
+    padding: 16px;
+    margin-bottom: 40px;
+    color:#fff;
+    background-color: #222;
+    border-radius: 8px;
+}
+span{
+    color:var(--heading-color)
+}
+
+.btn{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 4px;
+    padding:12px 20px;
+    box-shadow: (0, 0, 0, 0.2) 0px 1px 3px 0px;
+
+}
