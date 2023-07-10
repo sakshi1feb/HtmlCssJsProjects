@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TipCalculator</title>
+    <!-- linking the style sheet -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- created the amount-input-container div to take input of the bill amount from the user
+         and used the onkeyup attribute which is used to call the billTotal() function as soon
+        as any key is pressed from the keyboard  -->
+        <div class="container amount-input-container">
+            <div class="title">Bill total</div>
+            <div class="input-container">
+                <span>$</span>
+                <input type="text" placeholder="0.00" id='bill-amount' value="" onkeyup="billTotal()">
+            </div>
+        </div>
+
+        <!-- created the tip-container div to take input of the tip amount from the user which he is
+        interested in paying and using the onkeyup attribute which is used to call the
+        billTotal() function as soon as any key is pressed from the keyboard  to take the input
+        of the tip amount -->
+        <div class="container tip-container">
+            <div class="title">Tip</div>
+            <div class="input-container">
+                <span>%</span>
+                <input type="text" placeholder="10" id="tip"value="" onkeyup="billTotal()">
+            </div>
+        </div>
+        <!-- created the split-container which is used to count the number of  people and split the
+        bill accordingly. this container has to buttons to add or reduce people based onclick events -->
+        <div class="container flex-container">
+            <div class="split-container">
+                <div class="title">People</div>
+                <div class="controls">
+                    <span class="button-container">
+                        <button class="split-button" id="reduce-button" onclick="decreasePeople()">
+                            <span class="button-text">-</span>
+                        </button>
+                    </span>
+                    <span class="split-amount"id="people" >1</span>
+                    <span class="button-container">
+                        <button class="split-button" id="add-button" onclick="increasePeople()">
+                            <span class="button-text">+</span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <!-- this total-container is used to display the final result which each individual person
+            has to pay based on the above calculation's -->
+            <div class="total-container">
+                <div class="title">Total per Person</div>
+                <div class="total">$0.00</div>
+            </div>
+        </div>
+
+    </div>
+    <!-- linking the js file -->
+    <script src="./app.js"></script>
+</body>
+</html>
